@@ -1,11 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import ContextProvider from './context/context.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import ContextProvider from './context/context.jsx';
 
-ReactDOM.creatRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <ContextProvider>
     <App />
-  </ContextProvider>,
-)
+  </ContextProvider>
+);

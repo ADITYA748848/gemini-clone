@@ -8,10 +8,10 @@ import {
   } from "@google/generative-ai"
   
   const MODEL_NAME="gemini-2.0-flash";
-  const genAI =" AIzaSyDVLxWGvPOBvybFtQOukbHpA0NnLcRf0I0";
+  const API_KEY =" AIzaSyDVLxWGvPOBvybFtQOukbHpA0NnLcRf0I0";
   
   async function run(prompt) {
-    const genAI =new GoovgleGenerativeAI(API_KEY);
+    const genAI =new GoogleGenerativeAI(API_KEY);
     const model =genAI.getGenerativeModel({model:MODEL_NAME});
 
   
@@ -53,8 +53,9 @@ import {
         ],
     });
   
-    const result = await chatSession.sendMessage(prompt);
-    console.log(response.text());
+    const result = await chat.sendMessage(prompt);
+    console.log(result.response.text());
+    return result.response.text();
   }
   
   export default run;
