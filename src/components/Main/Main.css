@@ -70,16 +70,19 @@
 .main .card:hover{
     background-color: #dee6f1;
 }
-.main-bottom{
-    position: absolute;
+.main-bottom {
+    position: fixed;
     bottom: 0;
-    width:100% ;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     max-width: 852px;
-    padding: 0px 20px;
-    margin: auto;
-
-
+    padding: 10px 20px;
+    background-color: white;
+    z-index: 100;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
 }
+
 .search-box{
     display: flex;
     align-items: center;
@@ -111,13 +114,13 @@
     align-items: center;
     gap: 50px;
 }
-.main .bottm-info{
+.main .bottom-info {  /* 'bottm-info' ko 'bottom-info' se replace karein */
     font-size: 13px;
     margin: 15px auto;
     text-align: center;
     font-weight: 300;
-
 }
+
 .result{
     padding: 0px 5%;
     max-height: 70vh;
@@ -126,13 +129,13 @@
 .result::-webkit-scrollbar{
     display: none;
 }
-.result-title{
-    margin: 40px 0px;
+.result-data {
     display: flex;
-    align-items: center;
-    gap: 20px;
-
+    align-items: flex-start;
+    gap: 15px;
+    flex-wrap: wrap; 
 }
+
 .result img{
     width: 40px;
     border-radius: 50%;
