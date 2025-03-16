@@ -1,3 +1,6 @@
+#root{
+    display: flex;
+}
 .sidebar{
     min-height: 100vh;
     display: inline-flex;
